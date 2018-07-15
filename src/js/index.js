@@ -1,6 +1,6 @@
     var timer,
         flag = 1,
-        speed = 2,
+        speed = 3,
         score = 0,
         main = $('.wrapper .main');
 /**创建单排方块并插入到dom结构当中
@@ -38,6 +38,7 @@ function move(){
             main.css('top',nowPosition + 'px');
             if($(main).position().top >= 0){
                 createRow();
+                
                 main.css({
                     'top':'-100px'
                 })
@@ -45,8 +46,7 @@ function move(){
             var len = main.children().length;
             if(len >= 7){
                 for(var i = 0; i < len; i++ ){
-                    if($(main.children()[i-1]).hasClass('i')){
-                        console.log('end1');
+                    if($(main.children()[len-1].children[i]).hasClass('i')){
                         end();
                         clearInterval(timer);
                     }
@@ -64,7 +64,6 @@ function move(){
     main.off().on('click', function (event) {//jquery的事件委托
         if (flag) {
             var tar = event.target;//当前事件的源对象
-            console.log(flag + ',' +tar.className);
             if (tar.className == 'i') {
                 $(tar).css('backgroundColor', '#ddd');
                 $(tar).removeClass();
