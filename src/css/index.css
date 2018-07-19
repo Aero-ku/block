@@ -15,6 +15,7 @@
     width:100%;
     top:-1px;
     position:absolute;
+    z-index:999;
 }
 /*清除浮动*/
 .clearFloat:after{
@@ -29,6 +30,9 @@
     border-bottom:1px solid black;
     border-right:1px solid black;
     cursor:pointer;
+    background-image:'';
+    /*url(../img/0000.jpg)*/
+    background-size:cover;
 }
 .main .row div:nth-of-type(4){
     border-right:0;
@@ -58,9 +62,29 @@
 }
 .bg .content p{
     font-size:22px;
-    margin:5px 0;
+    margin:25px 0;
+}
+.bg .content button{
+    display:inline-block;
+}
+.bg .content p.record{
+    font-size:12px;
+    color:#fff;
+    cursor:pointer;
+
+}
+.bg .content p .score{
+    vertical-align:baseline;
+    display:inline-block;
+    font-size:30px;
+    margin:0 5px;
+    color:#fff;
+    background-image:linear-gradient(to right,#6600cc 0%,MediumBlue 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .btn{
+    display:inline-block;
     height:34px;
     line-height:34px;
     width:120px;
@@ -71,4 +95,62 @@
     border:0;
     outline:none;
     background:#0098e5;
+    margin-left:10px;
+}
+.bgd{
+    opacity: .65;
+    z-index:3;
+}
+.historyRecord{
+    display:none;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height:350px;
+    width:280px;
+    border:0px solid black;
+    z-index:9;
+    padding-top:20px;
+    padding-left:15px;
+    background:#fff;
+    border-radius:3px;
+}
+.historyRecord ul{
+    height:295px;
+    overflow:auto;
+}
+.historyRecord ul li span{
+    display:inline-block;
+    text-indent:1em;
+}
+.historyRecord ul li{
+    margin-bottom:15px;
+}
+.historyRecord ul li span:nth-of-type(1){
+    width:75%;
+}
+.bottom{
+    text-align:center;
+}
+.bottom button{
+    display:inline-block;
+    height:34px;
+    line-height:34px;
+    width:100px;
+    text-align:center;
+    cursor:pointer;
+    color:#fff;
+    border-radius:3px;
+    border:0;
+    outline:none;
+    margin-top:12px;
+
+}
+.bottom .return{
+    background:#0098e5;
+}
+.bottom .delete{
+    background:red;
+    margin-right:6px;
 }

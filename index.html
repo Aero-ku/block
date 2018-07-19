@@ -3,23 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="shortcut icon" href="./src/img/icon.jpg">
     <link rel="stylesheet" href="./src/css/index.css">
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.css" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-        <ul class="main clearFloat">
+        <ul id="main" class="main clearFloat">
         </ul>
         <div class="bg">
             <div class="content">
-                <p>别踩白块经典版</p>
+                <p class="result">别踩白块儿<span></span></p>
                 <button class="start btn">开始游戏</button>
+                <p class="record">历史游戏记录</p>
             </div>
-            
         </div>
+        <div class="bgd"></div>
+        <div class="historyRecord">
+            <ul>
+                <li>
+                    <span>时间</span><span>得分</span>
+                </li>
+            </ul>
+            <div class="bottom"><button class="delete">清空游戏记录</button><button class="return">返回</button></div>
+        </div>
+        
     </div>
+    <audio id="music"src="./src/music/森永千才 - ミチノチモシーキミノキモチ.mp3" autoplay></audio>
     <script src="./src/js/jquery.js"></script>
     <script src="./src/js/index.js">
-
     </script>
 </body>
 </html>
