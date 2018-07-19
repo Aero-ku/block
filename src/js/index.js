@@ -47,9 +47,8 @@ function move(){
             var len = main.children().length;
             if(len == 7){
             for (var i = 0; i < len; i++) {
-                console.log(main.children()[len - 1].children[i]);
                 var flag = $(main.children()[len - 1].children[i]).hasClass('i');
-                console.log(flag);
+
                 if(flag) {
                     end();
                     clearInterval(timer);
