@@ -69,8 +69,8 @@ function move(){
             if (tar.className == 'i') {
                 var random = Math.floor(Math.random()*90),
                     random2 = Math.floor(Math.random()*22);
-                if(random >= 60){
-                    $(tar).css({backgroundImage : 'url(src/img/'+random2+'.jpg)',backgroundSize:'cover'});
+                if(random >= 88){
+                    $(tar).css({backgroundImage : 'url(src/img/'+0+'.jpg)',backgroundSize:'cover'});
                 }else{
                     $(tar).css('backgroundColor', '#ddd');
                 }
